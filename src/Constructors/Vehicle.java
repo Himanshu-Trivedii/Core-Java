@@ -8,6 +8,7 @@ class Vehicle {
     Vehicle() {
         this("Car"); // ✅ Calls Constructor 2
         System.out.println("Default Constructor");
+
     }
 
     // Constructor 2 (Single Parameter)
