@@ -1,4 +1,4 @@
-package JavaSingletonExamples;
+package JavaSingletonExamples.Singleton;
 
 public class SynchronizedMethod {
     private static SynchronizedMethod instance;

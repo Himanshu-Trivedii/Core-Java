@@ -1,4 +1,4 @@
-package JavaSingletonExamples;
+package JavaSingletonExamples.Singleton;
 
 public class LazyInitialization {
     private static LazyInitialization instance;

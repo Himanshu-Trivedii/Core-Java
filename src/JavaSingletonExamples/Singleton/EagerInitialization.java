@@ -1,4 +1,4 @@
-package JavaSingletonExamples;
+package JavaSingletonExamples.Singleton;
 
 public class EagerInitialization {
     private static final EagerInitialization instance = new EagerInitialization();

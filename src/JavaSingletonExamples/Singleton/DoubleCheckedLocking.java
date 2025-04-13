@@ -1,4 +1,4 @@
-package JavaSingletonExamples;
+package JavaSingletonExamples.Singleton;
 
 public class DoubleCheckedLocking {
     private static volatile DoubleCheckedLocking instance;

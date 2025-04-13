@@ -1,4 +1,4 @@
-package JavaSingletonExamples;
+package JavaSingletonExamples.Singleton;
 
 public enum EnumSingleton {
     INSTANCE;

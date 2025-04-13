@@ -1,4 +1,4 @@
-package JavaSingletonExamples;
+package JavaSingletonExamples.Singleton;
 
 public class StaticInnerClass {
     private StaticInnerClass() {}
