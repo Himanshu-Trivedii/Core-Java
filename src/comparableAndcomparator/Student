@@ -1,0 +1,146 @@
+package src.ComparableandComparator;
+public class Student implements Comparable<Student> {
+    private int age;
+    private String name;
+    Student(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+    //    @Override
+    //    public int compareTo(Student o1) {
+    //        return this.age-o1.age;
+    //
+
+    @Override
+    public String toString() {
+        return name + " => " + age;
+    }
+    @Override
+    public int compareTo(Student o1) {
+        return this.name.compareTo(o1.name);
+        // This sorts them lexographically
+    }
+    /*
+    Return Value:
+
+Negative value: If the current string (this) is lexicographically less than the anotherString.
+
+Positive value: If the current string (this) is lexicographically greater than the anotherString.
+
+Zero: If both strings are equal.
+
+Internal Working of compareTo()
+Character-by-Character Comparison: The method starts by comparing the characters of both strings from left to right, one at a time. It checks the Unicode values of the characters.
+
+Unicode Value Comparison: The method compares the Unicode values of the characters in the two strings:
+
+Each character in a string is represented by a unique integer (its Unicode code point).
+
+For example, the Unicode value of 'A' is 65, 'B' is 66, and 'a' is 97.
+
+Steps of Comparison:
+
+It compares characters at the same position in both strings.
+
+If the characters at the same position are different, the method returns the difference of their Unicode values. For example, if 'A' (Unicode 65) is compared to 'B' (Unicode 66), the result will be -1 because 65 - 66 = -1.
+
+If the characters are the same, the comparison continues to the next character.
+
+If all characters are the same, but the strings have different lengths, the shorter string is considered "less than" the longer string.
+
+Stopping Criteria:
+
+If the method finds unequal characters, it stops and returns the difference of their Unicode values.
+
+If the characters are equal up to the end of the shortest string, it compares the lengths:
+
+If both strings are of the same length, they are considered equal (the method returns 0).
+
+If one string is shorter than the other, the shorter string is considered "less than" the longer one.
+
+Example Walkthrough:
+Let's take the example of comparing two strings "Alice" and "Bob".
+
+java
+Copy
+Edit
+String s1 = "Alice";
+String s2 = "Bob";
+
+int result = s1.compareTo(s2);
+Here’s what happens step-by-step:
+
+First Comparison: Compare the first character of both strings:
+
+s1.charAt(0) = 'A' (Unicode value 65)
+
+s2.charAt(0) = 'B' (Unicode value 66)
+
+Since 65 < 66, the result will be negative.
+
+The method immediately returns -1 (indicating that "Alice" is lexicographically less than "Bob").
+
+No further comparisons are needed because we already found the difference in the first character.
+
+Another Example: "apple" vs "applf"
+java
+Copy
+Edit
+String s1 = "apple";
+String s2 = "applf";
+
+int result = s1.compareTo(s2);
+First Comparison: Compare the first character of both strings:
+
+s1.charAt(0) = 'a' (Unicode value 97)
+
+s2.charAt(0) = 'a' (Unicode value 97)
+
+They are equal, so move to the next character.
+
+Second Comparison: Compare the second character:
+
+s1.charAt(1) = 'p' (Unicode value 112)
+
+s2.charAt(1) = 'p' (Unicode value 112)
+
+They are equal, so move to the next character.
+
+Third Comparison: Compare the third character:
+
+s1.charAt(2) = 'p' (Unicode value 112)
+
+s2.charAt(2) = 'p' (Unicode value 112)
+
+They are equal, so move to the next character.
+
+Fourth Comparison: Compare the fourth character:
+
+s1.charAt(3) = 'l' (Unicode value 108)
+
+s2.charAt(3) = 'l' (Unicode value 108)
+
+They are equal, so move to the next character.
+
+Fifth Comparison: Compare the fifth character:
+
+s1.charAt(4) = 'e' (Unicode value 101)
+
+s2.charAt(4) = 'f' (Unicode value 102)
+
+Since 101 < 102, the result will be negative.
+
+The method immediately returns -1 (indicating that "apple" is lexicographically less than "applf").
+
+Key Points of String.compareTo():
+It compares strings character by character based on the Unicode value of each character.
+
+The comparison stops as soon as a difference is found or if all characters are equal, in which case the method compares the lengths of the strings.
+
+The method returns a negative, positive, or zero value depending on the comparison result.
+
+This is the basic mechanism that Java uses to compare strings and sort them when needed. The Unicode values of characters drive the lexicographical order of strings.
+
+     */
+
+}
